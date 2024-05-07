@@ -1,5 +1,5 @@
-import { Edit, Send } from "@mui/icons-material";
-import { Button, Stack } from "@mui/material";
+import { Edit, FormatBold, FormatItalic, FormatUnderlined, Send } from "@mui/icons-material";
+import { Button, ButtonGroup, Stack, ToggleButton, ToggleButtonGroup } from "@mui/material";
 
 export default function MuiButton() {
     return (
@@ -27,6 +27,35 @@ export default function MuiButton() {
                 <Button variant="contained" size="large">Large</Button>
                 <Button variant="contained" size="large" startIcon={<Edit />}>Edit</Button>
                 <Button variant="contained" size="large" endIcon={<Send />} disableElevation disableRipple onClick={() => alert("Hello")}>Send</Button>
+            </Stack>
+            <Stack direction={"row"} mt={2}>
+                <ButtonGroup variant="outlined">
+                    <Button>Left</Button>
+                    <Button variant="contained">Center</Button>
+                    <Button>Right</Button>
+                </ButtonGroup>
+            </Stack>
+
+            <Stack display={"block"} mt={2}>
+                <ButtonGroup variant="contained" orientation="vertical" size="small" color="secondary" aria-label="alignment button group">
+                    <Button>Left</Button>
+                    <Button onClick={() => alert("center clicked")}>Center</Button>
+                    <Button>Right</Button>
+                </ButtonGroup>
+            </Stack>
+
+            <Stack direction="row" mt={2}>
+                <ToggleButtonGroup aria-label="text formatting">
+                    <ToggleButton value={"bold"}>
+                        <FormatBold />
+                    </ToggleButton>
+                    <ToggleButton value={"italic"}>
+                        <FormatItalic />
+                    </ToggleButton>
+                    <ToggleButton value={"underlined"}>
+                        <FormatUnderlined />
+                    </ToggleButton>
+                </ToggleButtonGroup>
             </Stack>
         </>
     )
