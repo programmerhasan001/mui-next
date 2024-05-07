@@ -1,5 +1,7 @@
 "use client"
 import MuiButton from '@/components/MuiButton'
+import MuiIconButton from '@/components/MuiIconButton'
+import MuiIcons from '@/components/MuiIcons'
 import MuiTypography from '@/components/MuiTypography'
 import styled from '@emotion/styled'
 
@@ -14,6 +16,8 @@ function Home() {
     <div>
       {/* <MuiTypography /> */}
       <MuiButton />
+      <MuiIcons />
+      <MuiIconButton />
     </div>
   )
 }
